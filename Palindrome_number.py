@@ -1,0 +1,15 @@
+def palindrome(x):
+    if x < 0:
+        return False
+
+    original = x
+    reversed_num = 0
+
+    while x:
+        reversed_num = reversed_num * 10 + x % 10
+        x //= 10
+
+    return original == reversed_num
+
+results = palindrome(123)
+print(results)
